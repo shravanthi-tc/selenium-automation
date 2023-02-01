@@ -1,1 +1,1 @@
-print("hello world targetclose")
+console.lg("hello world")
