@@ -1,1 +1,1 @@
-print("hello world")
+console.lg("hello world")
