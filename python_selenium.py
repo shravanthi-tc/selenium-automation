@@ -5,7 +5,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 # for upload file
 from selenium.webdriver.common.action_chains import ActionChains
-import autoit
 # For select dropdown
 from selenium.webdriver.support.select import Select
 import time
@@ -63,7 +62,7 @@ time.sleep(10)
 
 edit_button = WebDriverWait(driver, 10).until(
 EC.element_to_be_clickable((By. XPATH  ,"/html/body/div/div/div[1]/div[2]/div/div/div/div[2]/div/div[1]/div[2]/table/tbody/tr[1]/td[6]/button")))
-edit_button.click();
+edit_button.click()
 
 # Choose call response mode 
 
@@ -75,19 +74,3 @@ select_call_response= Select(driver.find_element(By.CLASS_NAME,"Polaris-Select__
 select_call_response.select_by_index(0)
 ActionChains(driver).move_to_element( driver.find_element(By.CLASS_NAME,"Polaris-DropZone__Container")).click().perform()
 time.sleep(2)
-
-# File upload from firefox start
-
- # File upload from firefox end
-
-
-handle = "[CLASS:#32770; TITLE:File Upload]"
-autoit.win_wait(handle, 60)
-time.sleep(2)
-autoit.control_set_text(handle, "Edit1", r"voice.mp3")
-autoit.control_click(handle, "Button1")
-
-time.sleep(2)
-save_updates_call_response = driver.find_element(By.XPATH,"//*[@id='AppFrameMain']/div/div/div[2]/div/div/form/div/div/div[2]/div/div[1]/button")
-save_updates_call_response.click();
-
