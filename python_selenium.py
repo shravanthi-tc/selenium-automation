@@ -1,9 +1,10 @@
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-
-chrome_options = Options()
-chrome_options.add_argument('--headless')
-chrome_options.add_argument('--no-sandbox')
-chrome_options.add_argument('--disable-dev-shm-usage')
-d = webdriver.Chrome('/home/<user>/chromedriver',chrome_options=chrome_options)
-d.get('https://www.google.nl/')
+# Short cuts insert cell
+# Insert cell above A
+# Insert cell below B
+# Delete cell double click D
+# pip (preferred installer program)
+driver = webdriver.Firefox()
+# driver = webdriver.Chrome(executable_path="C:/Users/Admin/Downloads/chromedriver_win32.exe")
+#driver.maximize_window()
+driver.get("https://targetclose-test.myshopify.com/admin/apps/jaya-stg")
