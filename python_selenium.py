@@ -1,6 +1,12 @@
+#Implementation of Selenium WebDriver with Python using PyTest
+ 
+import pytest
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
+import sys
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.keys import Keys
+from time import sleep
 
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-driver.get("https://www.google.com")
+chrome_driver = webdriver.Chrome()
+
+chrome_driver.get('https://lambdatest.github.io/sample-todo-app/')
